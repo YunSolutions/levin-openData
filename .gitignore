@@ -1,0 +1,5 @@
+*.csv
+*.pickle
+*.zip
+*.html
+__pycache__/*
