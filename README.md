@@ -16,7 +16,7 @@ The data is collected using various sensors. The accelerometer sensor gives us i
 
 # What is OBD?
 
-On-board diagnostics (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting capability. OBD systems give the vehicle owner or repair technician access to the status of the various vehicle subsystems. <refer Wikipedia - https://en.wikipedia.org/wiki/On-board_diagnostics >.
+[On-board diagnostics](https://en.wikipedia.org/wiki/On-board_diagnostics) (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting capability. OBD systems give the vehicle owner or repair technician access to the status of the various vehicle subsystems.
 
 OBD-II is an improvement over OBD-I in both capability and standardization. The OBD-II standard specifies the type of diagnostic connector and its pinout, the electrical signalling protocols available, and the messaging format.
 
@@ -32,7 +32,7 @@ The dataset can help in various kind of analysis including,
 
 1. Driving patterns
 
-2. Gear Detection <https://github.com/YunSolutions/levin-openData/tree/master/gear-detection> – source code shared in GitHub
+2. [Gear Detection](https://github.com/YunSolutions/levin-openData/tree/master/gear-detection)
 
 3. Events like hard brakes, hard acceleration, sharp turns and lane changes
 
@@ -41,10 +41,10 @@ The dataset can help in various kind of analysis including,
 Since, dataset contains data collected at different frequencies, it can a task to combine them and use them together. The dataset contains accelerometer data in raw format, to make sense of the data and convert it to usable format, please refer to data_extract.ipynb file.
 
 # More about Yun
-Website - www.yun.buzz
+Website - [www.yun.buzz](www.yun.buzz)
 
 # More about LEVIN
-webpage - levin.yun.buzz
+webpage - [levin.yun.buzz](levin.yun.buzz)
 
 
 
