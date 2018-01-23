@@ -1,0 +1,70 @@
+# Device Id
+Each device has a unique identifier. Device and Car is one to one mapping
+
+# Time Stamp 
+Time stamp refers to time. The value corresponds to data collected in that very second. Format – Year – Month – Day Hrs:Min:Sec
+
+# Trip ID 
+The trip id corresponds to 1 trip, Trip begins when engine is switched on and end when car engine is switched off.
+accData – Refers to Accelerometer  and Magnetometer sensor data. The data is collected from the OBD device, values are in terms of G-force. The data is across X, Y, Z axis where X-axis is horizontal, Y- axis is vertical and Z-axis is the direction of movement of the car. 
+The data is provided in raw format. To extract values, please use following formulae:
+
+< <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Formulae for conversion of hex data
+
+def convert_acc(x):
+	x = int(x,16)
+	if x>127:
+		x = x-256
+	return np.float64(x*0.01536)
+
+# Convert Raw data to engineering units 
+    
+    acc_data = pd.DataFrame()
+    j = 0
+    for acc_sample in data:
+        if len(acc_sample) == 162:
+            mx = convert_mag(acc_sample[0:4])
+            my = convert_mag(acc_sample[4:8])
+            mz = convert_mag(acc_sample[8:12])
+            acc_sample = acc_sample[12:]
+            for i in range(0, len(acc_sample), 6):
+                x = convert_acc(acc_sample[i:i+2])
+                y = convert_acc(acc_sample[i+2:i+4])
+                z = convert_acc(acc_sample[i+4:i+6])
+
+                # Apply rotation matrix and store the values
+                A = np.array([[x], [y], [z]])
+                B = np.dot(R,A)
+                x,y,z = B[:,0]
+                df = pd.DataFrame({'x':x, 'y':y, 'z':z}, index=[i/6+j])
+                acc_data = acc_data.append(df)
+            j += 25
+            
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# gps_speed 
+The speed in kmph as noted from GPS sensor
+# battery 
+The battery voltage corresponds to voltage of the battery installed in Car, which supplies electrical energy to a motor vehicle.
+# cTemp 
+The Temperature of the engine coolant of an internal combustion engine. The normal operating temperature for most engines is in a range of 90 to 104 degree Celsius (195 to 220 degrees Fahrenheit)
+# dtc 
+Number of diagnostic trouble codes. DTC's, or Diagnostic Trouble Codes, are used by automobile manufacturers to diagnose problems related to the vehicle.
+# eLoad 
+Engine load measures how much air (and fuel) you're sucking into the engine and then compares that value to the theoretical maximum.
+# iat
+The Intake Air Temperature sensor (IAT) has been utilised as an Engine Control Unit (ECU) input signal, as a requirement for calculating the Air Mass volume for the incoming air charge. This is, to assist in determining the correct engine fuel requirement to suit the operating air temperature.
+# imap 
+The manifold absolute pressure sensor (MAP sensor) is one of the sensors used in an internal combustion engine's electronic control system. The manifold absolute pressure sensor provides instantaneous manifold pressure information to the engine's electronic control unit (ECU). The data is used to calculate air density and determine the engine's air mass flow rate, which in turn determines the required fuel metering for optimum combustion (see stoichiometry) and influence the advance or retard of ignition timing.
+# kpl 
+KMPL is mileage in kilometres per litre. It is a derived metric derived from speed and fuel to air mass flow ratio. This ratio is constant in case of Petrol cars while changes for other Fuel types. Hence, the KMPL value is accurate for petrol cars, and contain some error in case of other fuel types.
+# maf 
+A mass (air) flow sensor (MAF) is used to find out the mass flow rate of air entering a fuel-injected internal combustion engine. The air mass information is necessary for the engine control unit (ECU) to balance and deliver the correct fuel mass to the engine.
+# rpm 
+RPM here means engine RPM. 
+# speed 
+Speed data as collected from OBD device mounted in the car.
+# tAdv 
+Timing advance refers to the number of degrees before top dead center (BTDC) that the spark will ignite the air-fuel mixture in the combustion chamber during the compression stroke.
+# tPos 
+Refers to throttle position
