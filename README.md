@@ -26,6 +26,16 @@ The dataset provided here is a sample data for data we collect real-time. This d
 
 This metadata includes – Device Id, timestamp, trip id, accelerometer data, speed gathered from GPS, battery voltage, coolant temperature, diagnostic trouble codes, engine load, intake air temperature, manifold absolute pressure, calculated mileage, mass airflow, engine RPM, speed collected from OBD, timing advance, throttle position and magnetometer data.
 
+The full data set is available as
+
+1. [A Single CSV](https://drive.google.com/open?id=1_Ox4iWbANuULxLdwJavLNiOJx6IiWV2R)
+
+2. [A Single SQLite3 Database](https://drive.google.com/open?id=1tJd8oosfpY_l2DPXiaFRObOBhCa2gFc-)
+
+3. [A Single Compressed Zip with individual CSVs](https://drive.google.com/open?id=1T0M_7585gl8h-wcCyfBdDQVaTXKbVdw8)
+
+4. [Individual CSVs](https://drive.google.com/open?id=1TKMBbFbB7ATTBklCpmFjrwVuKoH3AbSM)
+
 # How to use
 
 The dataset can help in various kind of analysis including,
