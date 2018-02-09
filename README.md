@@ -34,7 +34,7 @@ The full data set is available as
 
 3. [A Single Compressed Zip with individual CSVs](https://drive.google.com/open?id=1T0M_7585gl8h-wcCyfBdDQVaTXKbVdw8)
 
-4. [Individual CSVs](https://drive.google.com/open?id=1TKMBbFbB7ATTBklCpmFjrwVuKoH3AbSM)
+4. [Individual CSVs](https://mega.nz/#F!TE50HRyK!VTGi_U9KhsS-JJHBRzKKwA) This link will be updated monthly from now onwards
 
 # How to use
 
