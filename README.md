@@ -2,11 +2,11 @@
 
 LEVIN Vehicle Telematics Data
 
-Current version: v1
+Current version: v1.1
 
 Owner – Yuñ Solutions
 
-Data Updated – 23rd Jan 2018
+Data Updated – 10th Feb 2018
 
 # What is it?
 
@@ -28,13 +28,13 @@ This metadata includes – Device Id, timestamp, trip id, accelerometer data, sp
 
 The full data set is available as
 
-1. [A Single CSV](https://drive.google.com/open?id=1_Ox4iWbANuULxLdwJavLNiOJx6IiWV2R)
+1. [A Single CSV](https://mega.nz/#!PJxlCKDB) and [another Single CSV with more obd parameters](https://mega.nz/#!CV5lQbBZ)
 
 2. [A Single SQLite3 Database](https://drive.google.com/open?id=1tJd8oosfpY_l2DPXiaFRObOBhCa2gFc-)
 
 3. [A Single Compressed Zip with individual CSVs](https://drive.google.com/open?id=1T0M_7585gl8h-wcCyfBdDQVaTXKbVdw8)
 
-4. [Individual CSVs](https://drive.google.com/open?id=1TKMBbFbB7ATTBklCpmFjrwVuKoH3AbSM)
+4. [Individual CSVs](https://mega.nz/#F!TE50HRyK!VTGi_U9KhsS-JJHBRzKKwA) This link will be updated monthly from now onwards
 
 # How to use
 
@@ -59,7 +59,4 @@ webpage - [levin.yun.buzz](levin.yun.buzz)
 
 
 LEVIN Vehicle Telematics Data by Yun Solutions is licensed under Creative Commons BY-NC-SA License. 
-
-
-
 
